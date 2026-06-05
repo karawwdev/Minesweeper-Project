@@ -1,0 +1,32 @@
+.title {
+  display: block;
+  text-align: center;
+  font-size: large;
+}
+
+
+/* Placeholder classes below for when we add these with the javascript. 
+values will probably change */
+#grid {
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
+  gap: 4px;
+  width: 500px;
+  height: 500px;
+  background-color: darkgray;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.mine {
+  color: red;
+}
+
+.revealedCell {
+  color: grey
+}
