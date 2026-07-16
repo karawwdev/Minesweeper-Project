@@ -1,9 +1,3 @@
-.title {
-  display: block; 
-  text-align: center;
-  font-size: 2.5rem;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +5,7 @@
 }
 
  nav {
-  margin: 1em auto 1em 1em;
+  margin: 1em auto 0 1em;
   width: min(1000px, 100%);
 }
 
@@ -20,8 +14,12 @@ nav ul {
   align-items: left;
   list-style-type: none;
   gap: 4em;
-  font-size: 20px;
+  font-size: 1rem;
 }
+
+nav a {
+  text-decoration: none;
+} 
 
 details {
   position: relative;
@@ -32,23 +30,25 @@ details {
   width: 10em;
 }
 
-nav a {
-  text-decoration: none;
-} 
+.title {
+  display: block; 
+  text-align: center;
+  font-size: 2rem;
+}
 
 #board { 
   display: flex;
   border: 10px solid rgb(38, 38, 38);
-  width: 800px;
-  height: 800px;
+  width: 700px;
+  height: 700px;
   background-color: rgb(201, 201, 201);
   margin: 5rem auto;
   flex-wrap: wrap;
 }
 
 #board div {
-  width: 78px;
-  height: 78px;
+  width: 68px;
+  height: 68px;
   display: flex;
   border: 1px solid whitesmoke;
   background-color: rgb(175, 175, 175);
