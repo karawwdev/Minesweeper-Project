@@ -42,7 +42,7 @@ details {
   width: 700px;
   height: 700px;
   background-color: rgb(201, 201, 201);
-  margin: 5rem auto;
+  margin: 3rem auto 0 auto;
   flex-wrap: wrap;
 }
 
@@ -60,4 +60,37 @@ details {
 
 #board div:hover {
   scale: 1.05;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.game-buttons {
+  gap: 15rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 5rem;
+  width: 700px;
+  background-color: rgb(137, 190, 137);
+}
+
+.difficulty-button {
+  font-size: 18px;
+  position: absolute;
+  top: 885px;
+}
+
+#flag-button {
+  font-size: 2rem;
+  height: 3rem;
+  width: 3rem;
+  background-color: rgba(210, 216, 40, 0.404);
+}
+
+.button :first-child {
+  margin: left;
 }
