@@ -1,32 +1,63 @@
 .title {
-  display: block;
+  display: block; 
   text-align: center;
-  font-size: large;
+  font-size: 2.5rem;
 }
 
-
-/* Placeholder classes below for when we add these with the javascript. 
-values will probably change */
-#grid {
-  display: grid;
-  grid-template: repeat(10, 1fr) / repeat(10, 1fr);
-  gap: 4px;
-  width: 500px;
-  height: 500px;
-  background-color: darkgray;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.cell {
+ nav {
+  margin: 1em auto 1em 1em;
+  width: min(1000px, 100%);
+}
+
+nav ul {
   display: flex;
-  align-items: center;
+  align-items: left;
+  list-style-type: none;
+  gap: 4em;
+  font-size: 20px;
+}
+
+details {
+  position: relative;
+}
+
+.drop-down {
+  position: absolute;
+  width: 10em;
+}
+
+nav a {
+  text-decoration: none;
+} 
+
+#board { 
+  display: flex;
+  border: 10px solid rgb(38, 38, 38);
+  width: 800px;
+  height: 800px;
+  background-color: rgb(201, 201, 201);
+  margin: 5rem auto;
+  flex-wrap: wrap;
+}
+
+#board div {
+  width: 78px;
+  height: 78px;
+  display: flex;
+  border: 1px solid whitesmoke;
+  background-color: rgb(175, 175, 175);
+  font-size: 30px;
   justify-content: center;
-  background-color: black;
+  align-items: center;
+  transition: 25ms;
 }
 
-.mine {
-  color: red;
-}
-
-.revealedCell {
-  color: grey
+#board div:hover {
+  scale: 1.05;
 }

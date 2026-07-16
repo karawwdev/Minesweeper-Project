@@ -7,10 +7,36 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Nav section for our personal info -->
+  <nav>
+    <ul>
+      <li>Kara & Violet</li>
+         <details>
+        <summary>Github</summary>
+        <div class="drop-down">
+          <li><a href="https://github.com/karawwdev">Kara's Github</a></li>
+          <li><a href="https://github.com/pocketofrain">Violet's GitHub</a></li>
+        </div>
+      </details>
+      <details>
+        <summary>LinkedIn</summary>
+        <div class="drop-down">
+          <li><a href="">Kara's LinkedIn</a></li>
+          <li><a href="">Violet's LinkedIn</a></li>
+        </div>
+      </details>
+    </ul>
+  </nav>
+
+  <!-- Main title -->
   <div class="title">
     <h1>Minesweeper</h1>
   </div>
-  <div id="grid"></div>
+
+  <!-- The board, cells get added here as child divs -->
+  <div id="board"></div>
+  
   <script src="script.js"></script>
 </body>
 </html>
