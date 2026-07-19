@@ -11,7 +11,7 @@
   <!-- Nav section for our personal info -->
   <nav>
     <ul>
-      <li>Kara & Violet</li>
+      <li>Game by Kara & Violet</li>
          <details>
         <summary>Github</summary>
         <div class="drop-down">
@@ -41,11 +41,11 @@
   <section class="button">
     <div class="game-buttons">
       <div>
-        <details class="difficulty-button">
+        <details>
           <summary>Difficulty</summary>
-          <button id="diff-easy" onclick="populateBoard()">Easy</button>
-          <button id="diff-med" onclick="populateBoard()">Medium</button>
-          <button id="diff-hard" onclick="populateBoard()">Hard</button>
+          <button onclick="populateBoard('easy')">Easy</button>
+          <button onclick="populateBoard('med')">Medium</button>
+          <button onclick="populateBoard('hard')">Hard</button>
         </details>
       </div>
       <button id="flag-button">🚩</button>
