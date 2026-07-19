@@ -16,7 +16,6 @@ function populateBoard(gameDiff) {
   } else {
     console.error();
   };
-  console.log(numMines);
   for(let i = 0; i < numRows*numColumns; i++) {
     const newDiv = document.createElement('div'); // Create a new child div to represent each cell in the board
     newDiv.id = `cell${i+1}`; // Give the cells unique IDs
