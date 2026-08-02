@@ -3,10 +3,13 @@ let numRows = 10;
 let numColumns = 10;
 let numMines = 10;
 const board = document.querySelector('#board');
+const boardArray = [];
 
 // Populate the board
 function populateBoard(gameDiff) {
-  board.querySelectorAll(":scope > div").forEach(div => div.remove());
+  board.querySelectorAll(":scope > div").forEach(div => div.remove()); // Clear the board
+
+  // Determine difficulty (numMines)
   if(gameDiff === 'easy') {
     numMines=10; 
   } else if(gameDiff === 'med') {
@@ -16,9 +19,22 @@ function populateBoard(gameDiff) {
   } else {
     console.error();
   };
-  for(let i = 0; i < numRows*numColumns; i++) {
-    const newDiv = document.createElement('div'); // Create a new child div to represent each cell in the board
-    newDiv.id = `cell${i+1}`; // Give the cells unique IDs
-    board.appendChild(newDiv); // Append the cells to the board
+
+  // Nested loop creating rows and columns of cell divs
+  for(let i = 0; i < numColumns; i++) {
+    const currentRow = [];
+    const rowDiv = document.createElement('div');
+    rowDiv.classList.add('col');
+
+    for(let j = 0; j < numRows; j++) {
+      const cellDiv = document.createElement('div');
+      cellDiv.classList.add(`cell${i+1},${j+1}`); // Give each cell a unique class col,row (should be row,col)
+
+      rowDiv.appendChild(cellDiv)
+      currentRow.push(cellDiv);
+    }
+
+    board.appendChild(rowDiv);
+    boardArray.push(currentRow);
   }
 }
